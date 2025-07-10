@@ -33,7 +33,7 @@ System wspomagający terapię psychologiczną zbudowany w React.js + Express.js 
 
 ### 1. Klonowanie repozytorium
 ```bash
-git clone <repository-url>
+git clone https://github.com/Matheo682/Projekt_inzynieria_oprogramowania.git
 cd therapy-support-app
 ```
 
@@ -123,60 +123,9 @@ npm run client
 - `GET /api/notifications` - Lista powiadomień
 - `PUT /api/notifications/:id/read` - Oznaczenie jako przeczytane
 
-## Struktura projektu
-
-```
-therapy-support-app/
-├── client/                 # Frontend (React + Vite)
-│   ├── src/
-│   │   ├── components/     # Komponenty wielokrotnego użytku
-│   │   ├── contexts/       # Konteksty React (Auth, Notifications)
-│   │   ├── pages/          # Strony aplikacji
-│   │   ├── App.jsx         # Główny komponent
-│   │   └── main.jsx        # Punkt wejścia
-│   └── package.json
-├── server/                 # Backend (Express.js)
-│   ├── config/            # Konfiguracja bazy danych
-│   ├── middleware/        # Middleware (auth, validation)
-│   ├── routes/            # Endpointy API
-│   ├── database.sql       # Schema bazy danych
-│   ├── index.js           # Punkt wejścia serwera
-│   └── package.json
-├── .github/
-│   └── copilot-instructions.md
-└── package.json           # Skrypty główne
-```
-
-## Bezpieczeństwo
-
-- Hasła są hashowane używając bcrypt
-- Autoryzacja oparta na JWT tokenach
-- Walidacja danych na froncie i backendzie
-- Zabezpieczenie przed SQL Injection (parametrized queries)
-- CORS skonfigurowany dla bezpiecznej komunikacji
-
-## Responsywność
-
-Aplikacja jest w pełni responsywna i dostosowana do:
-- Komputerów stacjonarnych
-- Tabletów
-- Telefonów komórkowych
-
-## Rozwój
-
-### Dodawanie nowych funkcji
-
-1. Backend: Dodaj nowe endpointy w `server/routes/`
-2. Frontend: Utwórz nowe komponenty w `client/src/components/` lub strony w `client/src/pages/`
-3. Baza danych: Aktualizuj schema w `server/database.sql`
-
 ### Testing
 
-Aby uruchomić testy (gdy zostaną dodane):
 ```bash
 npm test
 ```
 
-## Licencja
-
-Ten projekt jest stworzony do celów edukacyjnych.
